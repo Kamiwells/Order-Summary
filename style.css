@@ -1,0 +1,188 @@
+/* <--Fonts--> */
+@font-face {
+    font-display: swap;
+    font-family: Red-Hat-Display;
+    font-style: normal;
+    font-weight: 500;
+    src: url(Fonts/red-hat-display-v21-latin-700.woff2);
+}
+@font-face {
+    font-display: swap;
+    font-family: Red-Hat-Display-bold;
+    font-style: normal;
+    font-weight: 900;
+    src: url(Fonts/red-hat-display-v21-latin-900.woff2);
+}
+/* <--Custom Properties--> */
+:root{
+--Blue-50: hsl(225, 100%, 98%);
+--Blue-60: hsl(229, 89%, 96%);
+--Blue-100: hsl(225, 100%, 94%);
+--Blue-700: hsl(245, 75%, 52%);
+--Blue-800: hsl(245, 96%, 71%);
+--transparent-blue: rgba(63, 46, 255, 0.15);
+--transparent-blueish: rgba(13, 0, 191, 0.15);
+--Blue-950: hsl(223, 47%, 23%);
+--Gray-600: hsl(224, 23%, 55%); 
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Red-Hat-Display', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: 100svh;
+    min-block-size: 100vh;
+    background: url(Images/pattern-background-mobile.svg);
+    background-position: center;
+    background-size: cover;
+    color: var(--Gray-600);
+    line-height: 1.5;
+}
+/* Resets */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img,
+picture,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* Order Summary */
+.order-summary{
+    /* padding: 2rem; */
+    max-width: 40rem;
+    margin: 3.8rem;
+    border-radius: 1.5rem;
+    background: var(--Blue-50);
+    box-shadow: 0px 20px 19px 0px var(--transparent-blueish);
+}
+
+
+/* img */
+.order-summary_img{
+    border-radius: 1.5rem 1.5rem 0 0;
+    background: url(Images/illustration-hero.svg);
+    background-position: center;
+    background-size: cover;
+    max-width: 40rem;
+    height: 15rem;
+}
+/* write-up */
+.order-summary__write-up{
+    font-size: 1.3rem;
+    margin: 2rem;
+    text-align: center;
+}
+.order-summary__write-up h1{
+    font-family: 'Red-Hat-Display-bold', sans-serif;
+    margin-block-end: 1.5rem;
+    color: var(--Blue-950);
+}
+.order-summary__annual-plan{
+    align-items: center;
+    font-family: 'Red-Hat-Display', sans-serif;
+    font-size: 1.3rem;
+    display: flex;
+    max-width: 26rem;
+    background: var(--Blue-60);
+    padding: 1rem 0;
+    margin: 0 auto;
+    border-radius: 0.7rem;
+}
+
+.order-summary__annual-plan > *{
+    padding: 0.2rem 1rem;
+}
+
+.annual-plan h2{
+    font-family: 'Red-Hat-Display-bold', sans-serif;
+    font-size: 1.25rem;
+    color: var(--Blue-950);
+}
+
+.annual-plan__change{
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--Blue-700);
+    margin-inline-start: 3rem;
+    font-size: 1.2rem;
+}
+.annual-plan__change:hover{
+    color: var(--Blue-800);
+    cursor: pointer;
+
+}
+
+.payment{
+    font-family: 'Red-Hat-Display-bold', sans-serif;
+    font-size: 1.14rem;
+    text-align: center;
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.payment > *{
+    padding: 2rem 0;
+}
+
+.order-summary__payment-btn{
+    max-width: 26rem;
+    margin: 0 auto;
+    padding: 1rem 6.5rem;
+    border-radius: 1rem;
+    color: var(--Blue-50);
+    box-shadow: 0px 20px 19px 0px var(--transparent-blue);
+    background: var(--Blue-700);
+}
+/* hover */
+.order-summary__payment-btn:hover{
+    background: var(--Blue-800);
+}
+/* Media */
+@media (min-width:48rem) {
+body{
+    background: url(Images/pattern-background-desktop.svg);
+    background-size: cover;
+    background-position: center;
+}
+.order-summary__annual-plan{
+    max-width: 30rem;
+}
+.order-summary__payment-btn{
+    max-width: 30rem;
+
+}
+.annual-plan__change{
+    margin-inline-start: 4rem;
+}
+}
+/* media Desktop */
+@media (min-width:64rem) {
+    .order-summary__write-up{
+        font-size: 1.6rem;
+    }
+    
+    .payment{
+        font-size: 1.6rem;
+    }
+    .order-summary__annual-plan{
+        font-size: 1.6rem;
+        margin: 3rem auto;
+    }
+    .order-summary__annual-plan h2{
+        font-size: 1.6rem;
+    }
+    .annual-plan__change{
+        margin-inline-start: 5rem;
+    }
+}
