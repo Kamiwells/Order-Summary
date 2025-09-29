@@ -168,11 +168,15 @@ body{
 }
 /* media Desktop */
 @media (min-width:64rem) {
+    .order-summary_img{
+        height: 20rem;
+    }
     .order-summary__write-up{
         font-size: 1.6rem;
     }
     .order-summary__write-up h1{
-        font-size: 2rem;
+        font-size: 2.3rem;
+        margin-block-start: 4rem;
     }
     
     .payment{
