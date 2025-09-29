@@ -171,6 +171,9 @@ body{
     .order-summary__write-up{
         font-size: 1.6rem;
     }
+    .order-summary__write-up h1{
+        font-size: 2rem;
+    }
     
     .payment{
         font-size: 1.6rem;
