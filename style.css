@@ -15,6 +15,7 @@
 }
 /* <--Custom Properties--> */
 :root{
+--white: hsl(225, 100%, 100%);
 --Blue-50: hsl(225, 100%, 98%);
 --Blue-60: hsl(229, 89%, 96%);
 --Blue-100: hsl(225, 100%, 94%);
@@ -59,11 +60,10 @@ video {
 }
 /* Order Summary */
 .order-summary{
-    /* padding: 2rem; */
     max-width: 40rem;
     margin: 3.8rem;
     border-radius: 1.5rem;
-    background: var(--Blue-50);
+    background: var(--white);
     box-shadow: 0px 20px 19px 0px var(--transparent-blueish);
 }
 
